@@ -10,9 +10,21 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: 'paprika',
-      filterOption: 'All'
+      searchTerm: '',
+      filterOptions: 'All'
     };
+  }
+
+  updateSearchTerm(term) {
+    this.setState({
+      searchTerm: term
+    })
+  }
+
+  updateFilterOption(options) {
+    this.setState({
+      filterOptions: options
+    })
   }
 
   render() {
@@ -24,11 +36,14 @@ class App extends Component {
             {/* <RecipeAdd /> */}
             <SearchBar
               searchTerm={this.state.searchTerm}
-              filterOption={this.state.filterOptions}/>
+              filterOptions={this.state.filterOptions}
+              handleUpdate={term=>this.updateSearchTerm(term)}
+              handleFilterChange={options => this.updateFilterOption(options)}
+              />
             <FilterableList
-              files={this.props.files}  
+              recipes={this.props.recipes}  
               searchTerm={this.state.searchTerm}
-              filterOption={this.state.filterOptions}/>
+              filterOptions={this.state.filterOptions}/>
       </div>
     );
   }

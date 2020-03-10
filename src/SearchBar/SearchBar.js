@@ -33,8 +33,12 @@ class SearchBar extends Component {
           <h1>Recipe Search</h1>
         </div>
         <div className="SearchBar__controls">
-          <SearchBox/>
-          <FilterOptions/>
+          <SearchBox
+            searchTerm={this.props.searchTerm}
+            handleUpdate={this.props.handleUpdate}/>
+          <FilterOptions
+            filterOptions={this.props.filterOptions}
+            handleFilterChange={this.props.handleFilterChange}/>
         </div>
       </div>
     );

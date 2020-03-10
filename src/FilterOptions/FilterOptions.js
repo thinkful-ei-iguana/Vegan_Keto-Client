@@ -9,7 +9,7 @@ class FilterOptions extends Component {
         <div className="FilterOptions__option">
                 <label htmlFor="filter_recipeType">
                     Recipe Type:
-                    <select 
+                    <select className="recipeTypeFilter"
                         checked={filterOptions ==="All"}
                         onChange={e => this.props.handleFilterChange(e.target.value)}>
                         <option value></option>
@@ -27,7 +27,7 @@ class FilterOptions extends Component {
                 <div className="FilterOptions__option">
                 <label htmlFor="filter_cuisine-type">
                     Cuisine Type:
-                    <select 
+                    <select className="cuisineTypeFilter"
                         checked={filterOptions ==="All"}
                         onChange={e => this.props.handleFilterChange(e.target.value)}>
                         <option value></option>

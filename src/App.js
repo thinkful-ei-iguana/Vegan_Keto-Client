@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Header from './Header/Header'
 import SearchBar from './SearchBar/SearchBar';
 import FilterableList from './FilterableList/FilterableList';
 
@@ -9,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: '',
+      searchTerm: 'paprika',
       filterOption: 'All'
     };
   }
@@ -17,13 +18,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar
-          searchTerm={this.state.searchTerm}
-          filterOption={this.state.filterOption}/>
-        <FilterableList
-          files={this.props.files}  
-          searchTerm={this.state.searchTerm}
-          filterOption={this.state.filterOption}/>
+            <Header />
+            {/* <Home /> */}
+            {/* <Landing /> */}
+            {/* <RecipeAdd /> */}
+            <SearchBar
+              searchTerm={this.state.searchTerm}
+              filterOption={this.state.filterOptions}/>
+            <FilterableList
+              files={this.props.files}  
+              searchTerm={this.state.searchTerm}
+              filterOption={this.state.filterOptions}/>
       </div>
     );
   }

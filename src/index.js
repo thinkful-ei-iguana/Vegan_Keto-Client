@@ -17,4 +17,3 @@ const RECIPES =[
 
 ReactDOM.render(<App recipes={RECIPES}/>, document.getElementById('root'));
 
-// 

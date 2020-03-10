@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import './ListItem.css';
 import ControlBar from '../ControlBar/ControlBar';
@@ -19,6 +20,8 @@ class ListItem extends Component {
     //   "mp3": faFileAudio
     // }
 
+
+    // render searched item detail
     return (
       <div className="ListItem">
         <div className="ListItem__icon">
@@ -28,6 +31,7 @@ class ListItem extends Component {
         </div>
         <div className="ListItem__content">
           <div className="ListItem__heading">
+            <ControlBar/>
             <div className="ListItem_title">{this.props.title}</div>
             <div className="ListItem__recipeType">{this.props.recipeType}</div>
             <div className="ListItem_cuisineType">{this.props.cuisineType}</div>
@@ -37,7 +41,7 @@ class ListItem extends Component {
             <div className="ListItem__instructions">
               {this.props.instructions}
             </div>
-            <ControlBar/>
+            
           </div>
         </div>
       </div>

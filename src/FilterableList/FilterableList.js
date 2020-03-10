@@ -4,10 +4,10 @@ import ListItem from '../ListItem/ListItem';
 
 class FilterableList extends Component {
   render() {
-    const { serachTerm, filterOption } = this.props;
+    const { serachTerm, filterOptions } = this.props;
     const list = this.props.recipes
-        .filter(recipe => recipe.name.includes(serachTerm)
-        && (filterOption === 'All' || recipe.status === filterOption))
+        .filter(recipe => recipe.ingredients.includes(serachTerm)
+        && (filterOptions === 'All' || recipe.recipeType === filterOptions))
         .map((recipe, key) => <ListItem {...recipe} key={key} />);
     return (
       <div className="FilterableList">
@@ -20,5 +20,6 @@ class FilterableList extends Component {
 FilterableList.defaultProps = {
   recipes: []
 };
+
 
 export default FilterableList;

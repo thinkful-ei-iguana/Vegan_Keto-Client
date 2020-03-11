@@ -80,9 +80,7 @@ class App extends Component {
   }
 
   render() {
-    // // const recipes = this.state.recipes.map((recipe, i) => {
-    // //   return <RecipeDetail {...recipe} key={1} />
-    // })
+    
     return (
       <div className="App">
             <Header />
@@ -91,7 +89,7 @@ class App extends Component {
             {/* <RecipeAdd /> */}
             <RecipeAdd />
             <SearchBar
-              searchTerm={this.state.searchTerm}
+              // searchTerm={this.state.searchTerm}
               filterOptions={this.state.filterOptions}
               handleUpdate={term =>this.updateSearchTerm(term)}
               handleFilterChange={options => this.updateFilterOption(options)}

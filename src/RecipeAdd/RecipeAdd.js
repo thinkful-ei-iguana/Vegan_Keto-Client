@@ -7,19 +7,19 @@ class RecipeAdd extends Component {
         <div className="recipeAddForm">
             <form id="add-recipe" className="recipe-form">
                 <div className="form-section">
-                    <label for="recipe-name">Recipe Name: </label>
+                    <label className="recipe-name">Recipe Name: </label>
                     <input type="text" name="recipe-name" placeholder="Coconut Flatbread" required></input>
                 </div>
                 <div className="form-section">
-                    <label for="recipe-ingredients">Ingredients: </label>
+                    <label className="recipe-ingredients">Ingredients: </label>
                     <textarea name="recipe-ingredients" rows="25" placeholder="1 Cup Coconut Flour" required></textarea>
                 </div>
                 <div className="form-section">
-                    <label for="recipe-instructions">Instructions: </label>
+                    <label className="recipe-instructions">Instructions: </label>
                     <textarea name="recipe-instructions" rows="45" placeholder="Simmer over low heat" required></textarea>
                 </div>
             </form>
-             <div class="cuisine-type">
+             <div className="cuisine-type">
                 <select>
                     <option value="Mexican">Mexican</option>
                     <option value="Korean">Korean</option>
@@ -36,7 +36,7 @@ class RecipeAdd extends Component {
                 </select>
            </div>
 
-           <div class="Meal Type">
+           <div className="Meal Type">
                 <select>
                     <option value="breakfast">Breakfast</option>
                     <option value="lunch">Lunch</option>

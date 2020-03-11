@@ -3,7 +3,7 @@ import './FilterOptions.css';
 
 class FilterOptions extends Component {
   render() {
-    const { filterOptions } = this.props;
+    const { filterOptions, filterOptionsCuisine } = this.props;
     return (
       <div className="FilterOptions">
         <div className="FilterOptions__option">
@@ -28,7 +28,7 @@ class FilterOptions extends Component {
                 <label htmlFor="filter_cuisine-type">
                     Cuisine Type:
                     <select className="cuisineTypeFilter"
-                        checked={filterOptions ==="All"}
+                        checked={filterOptionsCuisine ==="All"}
                         onChange={e => this.props.handleFilterChange(e.target.value)}>
                         <option value></option>
                         <option value="American">American</option>

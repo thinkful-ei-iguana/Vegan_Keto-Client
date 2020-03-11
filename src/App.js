@@ -11,7 +11,8 @@ class App extends Component {
     super(props);
     this.state = {
       searchTerm: '',
-      filterOptions: 'All'
+      filterOptions: 'All',
+      filterOptionsCuisine: 'All'
     };
   }
 
@@ -27,6 +28,12 @@ class App extends Component {
     })
   }
 
+  updateFilterOptionsCuisine(optionsCuisine) {
+    this.setState({
+      filterOptionsCuisine: optionsCuisine
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -39,11 +46,13 @@ class App extends Component {
               filterOptions={this.state.filterOptions}
               handleUpdate={term=>this.updateSearchTerm(term)}
               handleFilterChange={options => this.updateFilterOption(options)}
+              handleFilterChangeCuisine={optionsCuisine => this.updateFilterOptionsCuisine(optionsCuisine)}
               />
             <FilterableList
               recipes={this.props.recipes}  
               searchTerm={this.state.searchTerm}
-              filterOptions={this.state.filterOptions}/>
+              filterOptions={this.state.filterOptions}
+              filterOptionsCuisine={this.state.filterOptionsCuisine}/>
       </div>
     );
   }

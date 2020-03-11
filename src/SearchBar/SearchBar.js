@@ -38,7 +38,8 @@ class SearchBar extends Component {
             handleUpdate={this.props.handleUpdate}/>
           <FilterOptions
             filterOptions={this.props.filterOptions}
-            handleFilterChange={this.props.handleFilterChange}/>
+            handleFilterChange={this.props.handleFilterChange}
+            handleFilterChangeCuisine={this.props.handleFilterChangeCuisine}/>
         </div>
       </div>
     );

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import RecipeDetail from './RecipeDetail/RecipeDetail';
+// import RecipeDetail from './RecipeDetail/RecipeDetail';
 
 // import RecipeDetail from './RecipeDetail/RecipeDetail';
 
-// import Header from './Header/Header'
-// import RecipeAdd from './RecipeAdd/RecipeAdd';
-// import SearchBar from './SearchBar/SearchBar';
-// import FilterableList from './FilterableList/FilterableList';
+import Header from './Header/Header'
+import RecipeAdd from './RecipeAdd/RecipeAdd';
+import SearchBar from './SearchBar/SearchBar';
+import FilterableList from './FilterableList/FilterableList';
 
 import './App.css';
 
@@ -21,18 +21,18 @@ class App extends Component {
     };
   }
 
-  // updateSearchTerm(term) {
-  //   this.setState({
-  //     searchTerm: term
-  //   })
-  //   console.log(term);
-  // }
-  setSearch(term) {
+  updateSearchTerm(term) {
     this.setState({
       searchTerm: term
     })
     console.log(term);
   }
+  // setSearch(term) {
+  //   this.setState({
+  //     searchTerm: term
+  //   })
+  //   console.log(term);
+  // }
 
   updateFilterOption(options) {
     this.setState({
@@ -80,53 +80,54 @@ class App extends Component {
   }
 
   render() {
-    const recipes = this.state.recipes.map((recipe, i) => {
-      return <RecipeDetail {...recipe} key={1} />
-    })
+    // // const recipes = this.state.recipes.map((recipe, i) => {
+    // //   return <RecipeDetail {...recipe} key={1} />
+    // })
     return (
-      // <div className="App">
-      //       <Header />
-      //       {/* <Home /> */}
-      //       {/* <Landing /> */}
-      //       {/* <RecipeAdd /> */}
-      //       <RecipeAdd />
-      //       <SearchBar
-      //         searchTerm={this.state.searchTerm}
-      //         filterOptions={this.state.filterOptions}
-      //         handleUpdate={term =>this.updateSearchTerm(term)}
-      //         handleFilterChange={options => this.updateFilterOption(options)}
-      //         handleFilterChangeCuisine={optionsCuisine => this.updateFilterOptionsCuisine(optionsCuisine)}
-      //         />
-      //       <FilterableList
-      //         recipes={this.props.recipes}  
-      //         searchTerm={this.state.searchTerm}
-      //         filterOptions={this.state.filterOptions}
-      //         filterOptionsCuisine={this.state.filterOptionsCuisine}/>
-      // </div>
-      <main className="App">
-        <h1>NYT Best Sellers</h1>
-        <div className="search">
-          <form onSubmit={e => this.handleSubmit(e)}>
-            <label htmlFor="search">Search: </label>
-            <input
-              type="text"
-              id="search"
-              name="search"
-              value={this.state.term}
-              onChange={e => this.setSearch(e.target.value)}/>
+      <div className="App">
+            <Header />
+            {/* <Home /> */}
+            {/* <Landing /> */}
+            {/* <RecipeAdd /> */}
+            <RecipeAdd />
+            <SearchBar
+              searchTerm={this.state.searchTerm}
+              filterOptions={this.state.filterOptions}
+              handleUpdate={term =>this.updateSearchTerm(term)}
+              handleFilterChange={options => this.updateFilterOption(options)}
+              handleFilterChangeCuisine={optionsCuisine => this.updateFilterOptionsCuisine(optionsCuisine)}
+              handleSumbit={e => this.handleSubmit(e)}   
+              />
+            <FilterableList
+              recipes={this.props.recipes}  
+              searchTerm={this.state.searchTerm}
+              filterOptions={this.state.filterOptions}
+              filterOptionsCuisine={this.state.filterOptionsCuisine}/>
+      </div>
+//       <main className="App">
+//         <h1>NYT Best Sellers</h1>
+//         <div className="search">
+//           <form onSubmit={e => this.handleSubmit(e)}>
+//             <label htmlFor="search">Search: </label>
+//             <input
+//               type="text"
+//               id="search"
+//               name="search"
+//               value={this.state.term}
+//               onChange={e => this.setSearch(e.target.value)}/>
 
-            <label htmlFor="sort">Sort: </label>
-            <select id="sort" name="sort" onChange={e => this.setSort(e.target.value)}>
-              <option value="">None</option>
-              <option value="title">Title</option>
-              <option value="recipeType">Type</option>
-            </select>
-            <button type="submit">Search</button>
-          </form>
-          <div className="App_error">{ this.state.error }</div>
-        </div>
-        {recipes}
-      </main>
+//             <label htmlFor="sort">Sort: </label>
+//             <select id="sort" name="sort" onChange={e => this.setSort(e.target.value)}>
+//               <option value="">None</option>
+//               <option value="title">Title</option>
+//               <option value="recipeType">Type</option>
+//             </select>
+//             <button type="submit">Search</button>
+//           </form>
+//           <div className="App_error">{ this.state.error }</div>
+//         </div>
+//         {recipes}
+//       </main>
     );
   }
 }

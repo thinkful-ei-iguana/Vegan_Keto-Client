@@ -23,13 +23,17 @@ class SearchBox extends Component {
   render() {
     return (
       <div className="SearchBox">
-        <FontAwesomeIcon icon={faSearch}/>
-        <input 
-          type="text"
-          id="search"
-          placeholder="Search term" 
-          value={this.props.searchTerm}
-          onChange={e => this.props.handleUpdate(e.target.value)}/>
+        <form onSubmit={e => this.props.handleSubmit(e)}>
+          <label htmlFor="ingredient-search">Search: </label>
+         
+          <input 
+            type="text"
+            id="search"
+            placeholder="Search term" 
+            value={this.props.searchTerm}
+            onChange={e => this.props.handleUpdate(e.target.value)}/>
+             <FontAwesomeIcon icon={faSearch}/>
+         </form>
       </div>   
     );
   }

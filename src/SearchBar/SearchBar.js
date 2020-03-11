@@ -13,7 +13,8 @@ class SearchBar extends Component {
         <div className="SearchBar__controls">
           <SearchBox
             searchTerm={this.props.searchTerm}
-            handleUpdate={this.props.handleUpdate}/>
+            handleUpdate={this.props.handleUpdate}
+            handleSubmit={this.props.handleSubmit}/>
           <FilterOptions
             filterOptions={this.props.filterOptions}
             handleFilterChange={this.props.handleFilterChange}

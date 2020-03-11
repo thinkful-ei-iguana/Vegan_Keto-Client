@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './FilterableList.css';
-import ListItem from '../ListItem/ListItem';
+import RecipeDetail from '../RecipeDetail/RecipeDetail';
 
 class FilterableList extends Component {
   render() {
@@ -9,7 +9,7 @@ class FilterableList extends Component {
     .filter(recipe => (recipe.recipeType === filterOptions || filterOptions === 'All'))
         .filter(recipe => (recipe.cuisineType === filterOptionsCuisine || filterOptionsCuisine === 'All'))
         .filter(recipe => recipe.ingredients.includes(searchTerm.toLowerCase()))
-        .map((recipe, key) => <ListItem {...recipe} key={key} />);
+        .map((recipe, key) => <RecipeDetail {...recipe} key={key} />);
         
         // console.log(searchTerm);
         // console.log(filterOptions);

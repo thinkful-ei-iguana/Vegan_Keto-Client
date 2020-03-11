@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import './ListItem.css';
+import './RecipeDetail.css';
 import ControlBar from '../ControlBar/ControlBar';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import {
@@ -10,7 +10,7 @@ import ControlBar from '../ControlBar/ControlBar';
 //   faFileVideo
 //  } from '@fortawesome/free-solid-svg-icons';
 
-class ListItem extends Component {
+class RecipeDetail extends Component {
   render() {
 
     // const icons = {
@@ -23,22 +23,22 @@ class ListItem extends Component {
 
     // render recipe item detail
     return (
-      <div className="ListItem">
-        <div className="ListItem__icon">
-          <div className="ListItem__circle">
+      <div className="RecipeDetail">
+        <div className="RecipeDetail__icon">
+          <div className="RecipeDetail__circle">
             {/* <FontAwesomeIcon icon={icons[this.props.fileType] || faFileAlt }/> */}
           </div>
         </div>
-        <div className="ListItem__content">
-          <div className="ListItem__heading">
+        <div className="RecipeDetail__content">
+          <div className="RecipeDetail__heading">
             <ControlBar/>
-            <div className="ListItem_title">{this.props.title}</div>
-            <div className="ListItem__recipeType">{this.props.recipeType}</div>
-            <div className="ListItem_cuisineType">Cuisine: {this.props.cuisineType}</div>
-            <div className="ListItem__ingredients">Igredients: {this.props.ingredients}</div>
+            <div className="RecipeDetail_title">{this.props.title}</div>
+            <div className="RecipeDetail__recipeType">{this.props.recipeType}</div>
+            <div className="RecipeDetail_cuisineType">Cuisine: {this.props.cuisineType}</div>
+            <div className="RecipeDetail__ingredients">Igredients: {this.props.ingredients}</div>
           </div>
-          <div className="ListItem__actions">
-            <div className="ListItem__instructions">
+          <div className="RecipeDetail__actions">
+            <div className="RecipeDetail__instructions">
               Instructions: {this.props.instructions}
             </div>
             
@@ -49,4 +49,4 @@ class ListItem extends Component {
   }
 }
 
-export default ListItem;
+export default RecipeDetail;

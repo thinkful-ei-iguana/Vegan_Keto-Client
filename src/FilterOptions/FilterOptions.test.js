@@ -19,8 +19,8 @@ class FilterOptions extends Component {
                             <option value="dinner">Dinner</option>
                             <option value="dessert">Dessert</option>
                             <option value="snack">Snack</option>
-                            <option value="breads-and-crackers">Breads and Crackers</option>
-                            <option value="side-dish">Side Dish</option>
+                            <option value="Breads and Crackers">Breads and Crackers</option>
+                            <option value="Side Dish">Side Dish</option>
                             <option value="fat-bombs">Fat Bombs</option>
                         </select>
                     </label>

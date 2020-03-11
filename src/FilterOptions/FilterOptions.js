@@ -18,8 +18,8 @@ class FilterOptions extends Component {
               <option value="dinner">Dinner</option>
               <option value="dessert">Dessert</option>
               <option value="snack">Snack</option>
-              <option value="breads-and-crackers">Breads and Crackers</option>
-              <option value="side-dish">Side Dish</option>
+              <option value="Breads and Crackers">Breads and Crackers</option>
+              <option value="Side Dish">Side Dish</option>
               <option value="fat-bombs">Fat Bombs</option>
             </select>
           </label>
@@ -29,7 +29,7 @@ class FilterOptions extends Component {
             Cuisine Type:
             <select className="cuisineTypeFilter"
                 checked={filterOptionsCuisine ==="All"}
-                onChange={e => this.props.handleFilterChange(e.target.value)}>
+                onChange={e => this.props.handleFilterChangeCuisine(e.target.value)}>
                 <option value></option>
                 <option value="American">American</option>
                 <option value="Chinese">Chinese</option>

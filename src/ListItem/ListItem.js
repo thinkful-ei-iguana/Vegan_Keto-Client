@@ -34,12 +34,12 @@ class ListItem extends Component {
             <ControlBar/>
             <div className="ListItem_title">{this.props.title}</div>
             <div className="ListItem__recipeType">{this.props.recipeType}</div>
-            <div className="ListItem_cuisineType">{this.props.cuisineType}</div>
-            <div className="ListItem__ingredients">{this.props.ingredients}</div>
+            <div className="ListItem_cuisineType">Cuisine: {this.props.cuisineType}</div>
+            <div className="ListItem__ingredients">Igredients: {this.props.ingredients}</div>
           </div>
           <div className="ListItem__actions">
             <div className="ListItem__instructions">
-              {this.props.instructions}
+              Instructions: {this.props.instructions}
             </div>
             
           </div>

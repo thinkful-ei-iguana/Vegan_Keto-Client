@@ -6,11 +6,14 @@ class FilterableList extends Component {
   render() {
     const { searchTerm, filterOptions, filterOptionsCuisine } = this.props;
     const list = this.props.recipes
-        .filter(recipe => recipe.ingredients.includes(searchTerm)
-        && (filterOptions === 'All' || recipe.recipeType === filterOptions))
-        .filter(recipe => recipe.ingredients.includes(searchTerm)
-        && (filterOptions === 'All' || recipe.cuisineType === filterOptionsCuisine))
+    .filter(recipe => (recipe.recipeType === filterOptions || filterOptions === 'All'))
+        .filter(recipe => (recipe.cuisineType === filterOptionsCuisine || filterOptionsCuisine === 'All'))
+        .filter(recipe => recipe.ingredients.includes(searchTerm.toLowerCase()))
         .map((recipe, key) => <ListItem {...recipe} key={key} />);
+        
+        // console.log(searchTerm);
+        // console.log(filterOptions);
+        // console.log(filterOptionsCuisine);
     return (
       <div className="FilterableList">
         {list}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from './Header/Header'
+import RecipeAdd from './RecipeAdd/RecipeAdd';
 import SearchBar from './SearchBar/SearchBar';
 import FilterableList from './FilterableList/FilterableList';
 
@@ -20,18 +21,21 @@ class App extends Component {
     this.setState({
       searchTerm: term
     })
+    console.log(term);
   }
 
   updateFilterOption(options) {
     this.setState({
-      filterOptions: options
+      filterOptions: options      
     })
+    console.log(options);
   }
 
   updateFilterOptionsCuisine(optionsCuisine) {
     this.setState({
-      filterOptionsCuisine: optionsCuisine
+      filterOptionsCuisine: optionsCuisine   
     })
+    console.log(optionsCuisine);
   }
 
   render() {
@@ -41,6 +45,7 @@ class App extends Component {
             {/* <Home /> */}
             {/* <Landing /> */}
             {/* <RecipeAdd /> */}
+            <RecipeAdd />
             <SearchBar
               searchTerm={this.state.searchTerm}
               filterOptions={this.state.filterOptions}

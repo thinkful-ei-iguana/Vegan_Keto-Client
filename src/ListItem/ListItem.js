@@ -21,7 +21,7 @@ class ListItem extends Component {
     // }
 
 
-    // render searched item detail
+    // render recipe item detail
     return (
       <div className="ListItem">
         <div className="ListItem__icon">

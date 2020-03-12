@@ -2,26 +2,12 @@
 import React, { Component } from 'react';
 import './RecipeDetail.css';
 import ControlBar from '../ControlBar/ControlBar';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {
-//   faFileImage,
-//   faFileAudio,
-//   faFileAlt,
-//   faFileVideo
-//  } from '@fortawesome/free-solid-svg-icons';
+
 
 class RecipeDetail extends Component {
   render() {
 
-    // const icons = {
-    //   "jpg": faFileImage,
-    //   "mov": faFileVideo,
-    //   "txt": faFileAlt,
-    //   "mp3": faFileAudio
-    // }
-
-
-    // render recipe item detail
+       // render recipe item detail
     return (
       <div className="RecipeDetail">
         <div className="RecipeDetail__icon">

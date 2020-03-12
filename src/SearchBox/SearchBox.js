@@ -19,6 +19,8 @@ import './SearchBox.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
+
+//contains the search feature for Recipe Search
 class SearchBox extends Component {
   render() {
     return (
@@ -30,7 +32,7 @@ class SearchBox extends Component {
             type="text"
             id="search"
             placeholder="Kale or Avocado" 
-            value={this.props.searchTerm}
+            value={this.props.searchTerms}
             onChange={e => this.props.handleUpdate(e.target.value)}/>
              <FontAwesomeIcon icon={faSearch}/>
          </form>

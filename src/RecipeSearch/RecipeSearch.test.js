@@ -4,16 +4,16 @@ import React, { Component } from 'react';
 import SearchBox from '../SearchBox/SearchBox';
 import FilterOptions from '../FilterOptions/FilterOptions';
 
-import './SearchBar.css';
+import './RecipeSearch.css';
 
-class SearchBar extends Component {
+class RecipeSearch extends Component {
     render() {
         return (
-            <div className="SearchBar">
-                <div className="SearchBar__heading">
+            <div className="RecipeSearch">
+                <div className="RecipeSearch__heading">
                     <h1>Recipe Search</h1>
                 </div>
-                <div className="SearchBar__controls">
+                <div className="RecipeSearch__controls">
                     <SearchBox />
                     <FilterOptions />
                 </div>
@@ -22,4 +22,4 @@ class SearchBar extends Component {
     }
 }
 
-export default SearchBar;
+export default RecipeSearch;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './FilterOptions.css';
-// child of searchbar 
+// child of RecipeSearch 
 class FilterOptions extends Component {
   render() {
     const { filterOptions, filterOptionsCuisine } = this.props;

@@ -7,7 +7,7 @@ import Landing from './Landing/Landing';
 import Home from './Home/Home';
 // import RecipesRoute from './Routes/RecipesRoute/RecipesRoute';
 import RecipeAdd from './RecipeAdd/RecipeAdd';
-import RecipeEdit from './RecipeEdit/RecipeEdit';
+// import RecipeEdit from './RecipeEdit/RecipeEdit';
 import RecipeDetail from './RecipeDetail/RecipeDetail'
 import RecipeSearch from './RecipeSearch/RecipeSearch';
 // import FilterableList from './FilterableList/FilterableList';
@@ -18,10 +18,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      recipes: [],
-      searchTerm: '',
-      filterOptions: 'All',
-      filterOptionsCuisine: 'All'
+      // recipes: [],
+      // searchTerm: '',
+      // filterOptions: 'All',
+      // filterOptionsCuisine: 'All'
     };
   }
 
@@ -44,6 +44,7 @@ class App extends Component {
             <Route
               exact
               path={"/recipes/search"}
+              // props={}
               component={RecipeSearch}
             />
             <Route
@@ -56,11 +57,11 @@ class App extends Component {
               path={"/recipes/:recipeId"}
               component={RecipeDetail}
             />
-            <Route
+            {/* <Route
               exact
               path={"/edit-recipes/:recipeId"}
               component={RecipeEdit}
-            />
+            /> */}
           </Switch>
         </main>
       </div>

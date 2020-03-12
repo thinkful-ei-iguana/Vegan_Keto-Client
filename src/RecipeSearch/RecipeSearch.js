@@ -14,10 +14,9 @@ class RecipeSearch extends Component {
     };
   }
 
-
   updateSearchTerm(term) {
     this.setState({
-      searchTerm: term
+      searchTerms: term
     })
     console.log(term);
   }
@@ -28,7 +27,7 @@ class RecipeSearch extends Component {
   // //   console.log(term);
   // // }
 
-  updateFilterOption(options) {
+  updateFilterOptions(options) {
     this.setState({
       filterOptions: options      
     })
@@ -42,12 +41,12 @@ class RecipeSearch extends Component {
     console.log(optionsCuisine);
   }
 
-  
+
 handleSearch = (e) => {
   e.preventDefault();
   let searchArray = this.state.searchTerms.split(' ');
   let searchTerms = searchArray.join(',+');
-  let URL =`http://localhost:8000`;
+  let URL =`http://localhost:8000/recipes`;
 
   fetch(URL)
     .then(res => {
@@ -76,14 +75,17 @@ handleSearch = (e) => {
         </div>
         <div className="RecipeSearch__controls">
           <SearchBox
-            handleUpdate={this.props.updateSearchTerm}
-            // handleFilterChange={this.updateFilterOption}
-            // handleFilterChangeCuisine={this.updateFilterOptionsCuisine}
-            handleSumbit={this.props.handleSubmit} />
+            filterOptions={this.state.filterOptions}
+            filterOptionsCuisine={this.state.filterOptionsCuisine}
+            handleUpdate={term =>this.updateSearchTerm(term)}
+            // handleFilterChange={options => this.updateFilterOptions(options)}
+            // handleFilterChangeCuisine={optionsCuisine => this.updateFilterOptionsCuisine(optionsCuisine)}
+            handleSumbit={e => this.handleSearch(e)}            
+             />
           <FilterOptions
-            filterOptions={this.props.filterOptions}
-            handleFilterChange={this.props.handleFilterChange}
-            handleFilterChangeCuisine={this.props.handleFilterChangeCuisine}/>
+            filterOptions={this.filterOptions}
+            handleFilterChange={options => this.updateFilterOptions(options)}
+            handleFilterChangeCuisine={optionsCuisine => this.updateFilterOptionsCuisine(optionsCuisine)}/>
         </div>
       </div>
     );

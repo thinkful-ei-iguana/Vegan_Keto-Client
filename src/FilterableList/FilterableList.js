@@ -4,11 +4,11 @@ import RecipeDetail from '../RecipeDetail/RecipeDetail';
 
 class FilterableList extends Component {
   render() {
-    const { searchTerm, filterOptions, filterOptionsCuisine } = this.props;
+    const { searchTerms, filterOptions, filterOptionsCuisine } = this.props;
     const list = this.props.recipes
     .filter(recipe => (recipe.recipeType === filterOptions || filterOptions === 'All'))
         .filter(recipe => (recipe.cuisineType === filterOptionsCuisine || filterOptionsCuisine === 'All'))
-        .filter(recipe => recipe.ingredients.includes(searchTerm.toLowerCase()))
+        .filter(recipe => recipe.ingredients.includes(searchTerms.toLowerCase()))
         .map((recipe, key) => <RecipeDetail {...recipe} key={key} />);
         
         // console.log(searchTerm);

@@ -3,15 +3,15 @@ import './FilterOptions.css';
 // child of RecipeSearch 
 class FilterOptions extends Component {
   render() {
-    const { filterOptions, filterOptionsCuisine } = this.props;
+    const { filterOptions, filterOptionsCuisine, handleFilterChange, handleFilterChangeCuisine } = this.props;
     return (
       <div className="FilterOptions">
         <div className="FilterOptions__option">
           <label htmlFor="filter_recipeType">
             Recipe Type:
             <select className="recipeTypeFilter"
-              checked={filterOptions ==="All"}
-              onChange={e => this.props.handleFilterChange(e.target.value)}>
+              checked={filterOptions === "All"}
+              onChange={e => handleFilterChange(e.target.value)}>
               <option value></option>
               <option value="breakfast">Breakfast</option>
               <option value="lunch">Lunch</option>
@@ -28,8 +28,8 @@ class FilterOptions extends Component {
           <label htmlFor="filter_cuisineType">
             Cuisine Type:
             <select className="cuisineTypeFilter"
-                checked={filterOptionsCuisine ==="All"}
-                onChange={e => this.props.handleFilterChangeCuisine(e.target.value)}>
+                checked={filterOptionsCuisine === "All"}
+                onChange={e => handleFilterChangeCuisine(e.target.value)}>
                 <option value></option>
                 <option value="American">American</option>
                 <option value="Chinese">Chinese</option>

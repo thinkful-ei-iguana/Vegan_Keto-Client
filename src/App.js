@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import Header from './Header/Header'
 import Landing from './Landing/Landing';
 import Home from './Home/Home';
-import RecipesRoute from './Routes/RecipesRoute/RecipesRoute';
+// import RecipesRoute from './Routes/RecipesRoute/RecipesRoute';
 import RecipeAdd from './RecipeAdd/RecipeAdd';
 import RecipeEdit from './RecipeEdit/RecipeEdit';
 import RecipeDetail from './RecipeDetail/RecipeDetail'
@@ -43,11 +43,6 @@ class App extends Component {
             />
             <Route
               exact
-              path={"/recipes"}
-              component={RecipesRoute}
-            />
-            <Route
-              exact
               path={"/recipes/search"}
               component={RecipeSearch}
             />
@@ -63,7 +58,7 @@ class App extends Component {
             />
             <Route
               exact
-              path={"/recipes/:recipeId"}
+              path={"/edit-recipes/:recipeId"}
               component={RecipeEdit}
             />
           </Switch>
@@ -72,32 +67,7 @@ class App extends Component {
     )
   }
 }
-  // updateSearchTerm(term) {
-  //   this.setState({
-  //     searchTerm: term
-  //   })
-  //   console.log(term);
-  // }
-  // // setSearch(term) {
-  // //   this.setState({
-  // //     searchTerm: term
-  // //   })
-  // //   console.log(term);
-  // // }
-
-  // updateFilterOption(options) {
-  //   this.setState({
-  //     filterOptions: options      
-  //   })
-  //   console.log(options);
-  // }
-
-  // updateFilterOptionsCuisine(optionsCuisine) {
-  //   this.setState({
-  //     filterOptionsCuisine: optionsCuisine   
-  //   })
-  //   console.log(optionsCuisine);
-  // }
+  
 
   // handleSubmit(e) {
   //   e.preventDefault();

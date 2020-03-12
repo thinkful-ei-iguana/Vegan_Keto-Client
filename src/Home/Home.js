@@ -12,29 +12,30 @@ class Home extends Component {
     render() {
         return (
             <div className="home-container">
+                <h1>Welcome!</h1>
                 <ul id="home-link-list">
                     <Link
                         className="home-link-text"
-                        to={"/RecipeSearch"}>
+                        to={"/recipes/search"}>
                         <li className="home-search">Search Recipes</li>
                     </Link>
                     <Link
                         className="home-link-text"
-                        to={"/RecipeAdd"}>
+                        to={"/recipes/create"}>
                         <li className="home-search">Add A Recipe</li>
                     </Link>
                     <Link
                         className="home-link-text"
-                        to={"/RecipeEdit"}>
+                        to={"/recipes/:recipeId"}>
                         <li className="home-search">Edit Recipes</li>
                     </Link>
                     <Link
                         className="home-link-text"
-                        to={"/RecipeFavorites"}>
+                        to={"/edit-recipes/:recipeId"}>
                         <li className="home-search">Recipe Favorites</li>
                     </Link>
                 </ul>
-                <h1>Hello!</h1>
+                
             </div>
         )
     }

@@ -21,7 +21,7 @@ class RecipeDetail extends Component {
             <div className="RecipeDetail_title">{this.props.title}</div>
             <div className="RecipeDetail__recipeType">{this.props.recipeType}</div>
             <div className="RecipeDetail_cuisineType">Cuisine: {this.props.cuisineType}</div>
-            <div className="RecipeDetail__ingredients">Igredients: {this.props.ingredients}</div>
+            <div className="RecipeDetail__ingredients">Ingredients: {this.props.ingredients}</div>
           </div>
           <div className="RecipeDetail__actions">
             <div className="RecipeDetail__instructions">

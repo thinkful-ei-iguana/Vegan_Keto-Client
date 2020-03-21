@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
+import Landing from './Components/Landing/Landing';
 
-import Header from './Header/Header'
-import Landing from './Landing/Landing';
-import Home from './Home/Home';
+import AccountCreationRoute from '../src/Routes/AccountCreationRoute/AccountCreationRoute';
+import AccountCreation from '../src/Components/AccountCreation/AccountCreation';
+// import LoginRoute from './Routes/LoginRoute/LoginRoute';
+
+import Header from './Components/Header/Header'
+
+import Home from './Components/Home/Home';
 // import RecipesRoute from './Routes/RecipesRoute/RecipesRoute';
-import RecipeAdd from './RecipeAdd/RecipeAdd';
+import RecipeAdd from './Components/RecipeAdd/RecipeAdd';
 // import RecipeEdit from './RecipeEdit/RecipeEdit';
-import RecipeDetail from './RecipeDetail/RecipeDetail'
-import RecipeSearch from './RecipeSearch/RecipeSearch';
+import RecipeDetail from './Components/RecipeDetail/RecipeDetail'
+import RecipeSearch from './Components/RecipeSearch/RecipeSearch';
 // import FilterableList from './FilterableList/FilterableList';
 
 import './App.css';
@@ -36,6 +41,11 @@ class App extends Component {
               path={"/"}
               component={Landing}
             />
+            <Route
+              exact
+              path={"/accountCreation"}
+              component={AccountCreationRoute}
+              />
             <Route
               exact
               path={"/home"}

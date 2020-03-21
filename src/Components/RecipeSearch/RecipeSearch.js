@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './RecipeSearch.css';
 import Header from '../Header/Header';
-import SearchBox from '../../SearchBox/SearchBox';
+import SearchBox from '../SearchBox/SearchBox';
 import FilterableList from '../FilterableList/FilterableList';
 import FilterOptions from '../FilterOptions/FilterOptions';
 

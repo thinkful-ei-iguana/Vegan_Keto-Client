@@ -14,7 +14,7 @@ class Landing extends Component {
                         The Cruelty Free Keto Recipe Stop!
                     </h4>
                     <div className="Home-Button" >
-                        <Link className="Home-Button" to="/Home">
+                        <Link className="account-creation" to="/AccountCreation">
                             Enter to find the tastiest recipes!
                         </Link>
                     </div>
